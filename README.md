@@ -11,7 +11,7 @@ Given an array of integers, find the elements in the array that are also Fibonac
 
 Let us define an expression to be any String. `Expression` is therefore a datatype with a String as its internal representation. A fully parenthesized expression is one where every opening parenthesis, '(', has a matching closing parenthesis, ')'. An expression that contains no parentheses is, trivially, a fully parenthesized expression. The datatype `FPExpression` is a subtype of `Expression` (and also has recursive structure). Implement the key methods for `FPExpression`.
 
-Note that your implementation should support these different types of brackets/parentheses: `()`, `[], `{}`. The usual rules apply: `{` is closed by `}`, etc.
+Note that your implementation should support these different types of brackets/parentheses: `()`, `[]`, `{}`. The usual rules apply: `{` is closed by `}`, etc.
 
 Responses to potential doubts:
 + Whitespace can be ignored irrespective of where it occurs.
