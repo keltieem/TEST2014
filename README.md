@@ -9,8 +9,25 @@ Given an array of integers, find the elements in the array that are also Fibonac
 
 ## Question 2: Fully Parenthesized Expressions
 
-Let us define an expression to be any String. `Expression` is therefore a datatype with a String as its internal representation. A fully parenthesized expression is one where every opening parenthesis, '(', has a matching closing parenthesis, ')'. An expression that contains no parentheses is, trivially, a fully parenthesized expression. The datatype `FPExpression` is a subtype of `Expression` (and also has recursive structure). Implement two key methods for `FPExpression`:
+Let us define an expression to be any String. `Expression` is therefore a datatype with a String as its internal representation. A fully parenthesized expression is one where every opening parenthesis, '(', has a matching closing parenthesis, ')'. An expression that contains no parentheses is, trivially, a fully parenthesized expression. The datatype `FPExpression` is a subtype of `Expression` (and also has recursive structure). Implement the key methods for `FPExpression`.
 
-1. A constructor that takes an `Expression` as an argument and builds an `FPExpression` if the given `Expression` is a fully parenthesized expression. This constructor should use a `static` method of the class `FPExpression` that tests if a given String is fully parenthesized.
+Note that your implementation should support these different types of brackets/parentheses: `()`, `[], `{}`. The usual rules apply: `{` is closed by `}`, etc.
 
-2. A method `subExpression()` that takes an integer as an argument, where the integer represents the position of an opening parenthesis, '(', and returns that subexpression (of type `FPExpression`) that is enclosed by the indicated opening parenthesis and its matching closing parenthesis. For this method, we will assume that the first position of an `Expression` is indexed by 0 and the last position by the length of the `Expression` less 1.
+Responses to potential doubts:
++ Whitespace can be ignored irrespective of where it occurs.
++ An empty String "" is not a valid expression and hence not a valid fully parenthesized expression as well.
+
+## What Should You Implement
+
++ You should implement all the methods that are indicated with `TODO`.
++ Passing the provided tests is the minimum requirement. Use the tests to identify cases that need to be handled.
++ You can implement additional helper methods if you need to but you should keep these methods `private` to the appropriate classes.
++ You do not need to implement new classes.
++ You can use additional standard Java libraries by importing them.
++ Do not throw new exceptions unless the specification for the method permits exceptions.
+
+## Submission Instructions
+
++ Create a BitBucket repository called `PPT-Nov19`. You should commit all your work to this repository. 
++ Make sure you provide read+write access to user id `gsathish`.
++ Do not wait until the last minute to push your work to BitBucket. It is a good idea to push your work at intermediate points as well.
