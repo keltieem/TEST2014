@@ -25,7 +25,7 @@ Responses to potential doubts:
 + Whitespace can be ignored irrespective of where it occurs.
 + An empty String "" is not a valid expression and hence not a valid fully parenthesized expression as well.
 
-## What Should You Implement
+## What Should You Implement / Guidelines
 
 + You should implement all the methods that are indicated with `TODO`.
 + Passing the provided tests is the minimum requirement. Use the tests to identify cases that need to be handled.
