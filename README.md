@@ -9,6 +9,7 @@ November 19, 2014
 + You have 135 minutes (2h 15m) to complete the tasks.
 + We will start cloning repositories at **7:22 p.m.** so you should have committed all your work to BitBucket by that time (see submission instructions below).
 + Take your time to read the questions. 
++ Skeleton code can be obtained by cloning this repository.
 + Best of luck!
 
 ## Question 1: Find the Fibonacci Numbers
