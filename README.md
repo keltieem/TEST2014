@@ -3,9 +3,17 @@ Programming Proficiency Test
 
 November 19, 2014
 
+## General Instructions
+
++ There are only two questions that you need to complete.
++ You have 135 minutes (2h 15m) to complete the tasks.
++ We will start cloning repositories at **7:22 p.m.** so you should have committed all your work to BitBucket by that time (see submission instructions below).
++ Take your time to read the questions. 
++ Best of luck!
+
 ## Question 1: Find the Fibonacci Numbers
 
-Given an array of integers, find the elements in the array that are also Fibonacci numbers and return all such numbers as a list sorted in ascending order. If the array containts duplicates that are also Fibonacci numbers then the list returned should have only one entry (i.e., the list should not contain duplicates).
+Given an array of integers, find the elements in the array that are also Fibonacci numbers and return all such numbers as a list sorted in ascending order. If the array containts duplicates that are also Fibonacci numbers then the list returned should have only one entry for such numbers (i.e., the list should not contain duplicates).
 
 ## Question 2: Fully Parenthesized Expressions
 
