@@ -1,5 +1,7 @@
 package fibonacci;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Fibonacci {
@@ -15,9 +17,42 @@ public class Fibonacci {
 	 *         contain any Fibonacci numbers then an empty list is returned.
 	 */
 	public static List<Integer> getFibonacciNumbers_sorted(Integer[] inputArray) {
-		// TODO: Implement this method
+	    List<Integer> outputList = new ArrayList<Integer>();
+	    List<Integer> fibList = new ArrayList<Integer>();
+	    int fibNum1 = 1;
+	    int fibNum2 = 2;
+	    int store;
 
-		return null; // change this
+	    if(inputArray == null)
+	        return outputList;
+	    
+	    if(inputArray.length == 1){
+	        outputList.add(inputArray[0]);
+	        return outputList;
+	    }
+	    int size = inputArray.length;
+	    
+        for(int i = 1; i < size; i++){ //move through each element in the passed array
+            
+            while(fibNum2 < (inputArray[i] + 1)){ //compute all 
+               fibList.add(fibNum1);
+               store = fibNum2;
+               fibNum2 = fibNum1 + fibNum2;
+               fibNum1 = store;
+                
+            }
+            
+            if(fibList.contains(inputArray[i])){ //if the value at index i is a Fibonacci num, add to output
+                outputList.add(inputArray[i]);
+            }       
+                
+            
+        } 
+        
+	    
+	    Collections.sort(outputList); // sort list
+		return outputList; 
 	}
+
 
 }
