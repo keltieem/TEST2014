@@ -1,5 +1,7 @@
 package expression;
 
+import java.util.ArrayList;
+
 public class FPExpression extends Expression {
 
 	/**
@@ -69,8 +71,43 @@ public class FPExpression extends Expression {
 	 * @return true if expression is fully parenthesized and false otherwise
 	 */
 	public static boolean isFPExpression(String expression) {
-		// TODO: Implement this method
-		return true; // change this
+        String[] splitString;
+        int countLeftRound = 0;
+        int countRightRound = 0;
+        int countLeftSquare = 0;
+        int countRightSquare = 0;
+        int countLeftCurly = 0;
+        int countRightCurly = 0;
+        
+        splitString = expression.split("");
+        
+        for(int index = 0; index < splitString.length; index++ ){
+           if(splitString[index] == "("){
+               countLeftRound++;
+           }
+           if(splitString[index] == "["){
+               countLeftSquare++;
+           }
+           if(splitString[index] == "{"){
+               countLeftCurly++;
+           }
+           if(splitString[index] == ")"){
+               countRightRound++;
+           }
+           if(splitString[index] == "]"){
+               countRightSquare++;
+           }
+           if(splitString[index] == "}"){
+               countRightCurly++;
+           }
+        }
+        
+        if(countLeftRound == countRightRound 
+           && countLeftSquare == countRightSquare 
+           && countLeftCurly == countRightCurly)
+            return true;
+        
+        return false;
 	}
 
 }
