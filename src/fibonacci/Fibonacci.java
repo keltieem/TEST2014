@@ -34,15 +34,25 @@ public class Fibonacci {
 	    
         for(int i = 1; i < size; i++){ //move through each element in the passed array
             
-            while(fibNum2 < (inputArray[i] + 1)){ //compute all 
-               fibList.add(fibNum1);
+            int largestVal = 0;
+            for(int val = 0; val < size; val++){ //find largest value in array for computing fib nums
+                if (largestVal < inputArray[val])
+                    largestVal = inputArray[val];
+            }
+            
+            while(fibNum2 < (largestVal + fibNum1)){
+                
+                if(fibList.contains(fibNum1) == false){ //do not add duplicates
+                    fibList.add(fibNum1);
+                }               
                store = fibNum2;
                fibNum2 = fibNum1 + fibNum2;
                fibNum1 = store;
                 
             }
             
-            if(fibList.contains(inputArray[i])){ //if the value at index i is a Fibonacci num, add to output
+          //if the value at index i is a Fibonacci num, add to output; do not add duplicates
+            if(fibList.contains(inputArray[i]) && outputList.contains(inputArray[i]) == false){ 
                 outputList.add(inputArray[i]);
             }       
                 
