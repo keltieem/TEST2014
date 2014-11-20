@@ -25,6 +25,9 @@ public class FPExpression extends Expression {
 	 */
 	public static FPExpression getFPExpression(String expression)
 			throws IllegalArgumentException {
+	    if(expression.equals("")){
+	        throw new IllegalArgumentException("The expression cannot be null!");
+	    }
 	        
 	    if(isFPExpression(expression) == false){
 	        throw new IllegalArgumentException("This is not a fully parenthesized expression!");
