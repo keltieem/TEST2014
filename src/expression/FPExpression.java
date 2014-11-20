@@ -1,7 +1,5 @@
 package expression;
 
-import java.util.ArrayList;
-
 public class FPExpression extends Expression {
 
 	/**
@@ -27,11 +25,12 @@ public class FPExpression extends Expression {
 	 */
 	public static FPExpression getFPExpression(String expression)
 			throws IllegalArgumentException {
-		// TODO: Implement this method
+	        
+	    if(isFPExpression(expression) == false){
+	        throw new IllegalArgumentException("This is not a fully parenthesized expression!");
+	    }
+	    else
 
-		// If the input String is a valid fully parenthesized expression then
-		// the following statement is correct.
-		// This uses the private constructor.
 		return new FPExpression(expression);
 	}
 
@@ -45,9 +44,21 @@ public class FPExpression extends Expression {
 	 */
 	public static FPExpression getFPExpression(Expression expression)
 			throws IllegalArgumentException {
-		// TODO: Implement this method. Somewhat similar to the method above.
+	    
+	    String newExpression;
+	    
+        if(isFPExpression(expression) == false){
+	        throw new IllegalArgumentException("This is not a fully parenthesized expression!");
+	    }
+	    else{
+	        newExpression = expression.toString();
+	        if(isFPExpression(newExpression) == false){
+	            throw new IllegalArgumentException("This is not a fully parenthesized expression!");
+	        }
 
-		return null; // change this for sure!
+	    }
+        
+		return new FPExpression(newExpression);
 
 	}
 
